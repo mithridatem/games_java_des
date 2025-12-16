@@ -22,6 +22,13 @@ public class Gobelet {
         for(Des des : this.poulDes){
             des.lancer();
             valeurGobelet += des.getScore();
+            if (this.valeurGobelet > 10) {
+                throw new DesException("Le joueur à un score maximal");
+            }
+             if (this.valeurGobelet < 5)
+             {
+                 throw new DesException("Le joueur à un score minimal");
+             }
             des.setScore(0);
         }
     }

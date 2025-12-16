@@ -54,10 +54,10 @@ public class Partie {
 
     private void tourPartie()
     {
+
         //Lancer de chaque joueur
         this.j1.lancerGobelet();
         this.j2.lancerGobelet();
-
         //test si j1 gagne
         if (this.j1.getValeurLance() > this.j2.getValeurLance()) {
             this.scoreJ1 += 2;
